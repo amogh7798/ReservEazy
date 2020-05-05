@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.covid19.reserveazy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".FireApp">
+        <activity android:name=".main_front_page">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Front_Activity"></activity>
+        <activity android:name=".login" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".shop_detail" />
+        <activity android:name=".merchant_login" />
+        <activity android:name=".merchant_register">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".merchant_home"></activity>
+        <activity android:name=".merchant_user_detail"></activity>
+        <activity android:name=".customer_home"></activity>
+        <activity android:name=".mybookings"></activity>
+        <activity android:name=".slot_booked"></activity>
+        <activity android:name=".customer_register"></activity>
+        <activity android:name=".edit_customer"></activity>
+        <service android:name=".FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:name=".edit_merchant"></activity>
+        <activity android:name=".order_cancel"></activity>
+    </application>
+
+</manifest>

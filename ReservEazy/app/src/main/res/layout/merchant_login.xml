@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  This file is part of ReservEazy.
+
+    ReservEazy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ReservEazy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ReservEazy.  If not, see <https://www.gnu.org/licenses/>. -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <ImageView
+        android:id="@+id/merchant_login_logo"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/text_logo"/>
+
+    <TextView
+        android:id="@+id/hellomerchant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:text="Hello Merchant!!"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/merchant_user"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hellocustomer"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:hint="Username...."
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"/>
+
+    <EditText
+        android:id="@+id/merchant_pass"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/merchant_user"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:hint="Password...."
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/white"/>
+
+    <Button
+        android:id="@+id/merchant_login_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/merchant_pass"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:text="LOGIN"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/haveaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dont Have an Account?..."
+        android:layout_below="@id/merchant_login_button"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"/>
+    <Button
+        android:id="@+id/merchant_register"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/haveaccount"
+        android:layout_below="@+id/merchant_login_button"
+        android:background="@drawable/round_button"
+        android:text="Register"
+        android:textSize="10sp"/>
+    <Button
+        android:id="@+id/m_l_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/merchant_register"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:layout_centerHorizontal="true"
+        android:text="FORGOT PASSWORD"
+        android:padding="5dp"/>
+    <RelativeLayout
+        android:id="@+id/m_r_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/m_r_enteremail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Enter Email"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_below="@+id/m_r_enteremail"
+            android:id="@+id/m_r_forgotemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/m_r_submit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:background="@drawable/gradient"
+            android:layout_below="@+id/m_r_forgotemail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="SUBMIT"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  This file is part of ReservEazy.
+
+    ReservEazy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ReservEazy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ReservEazy.  If not, see <https://www.gnu.org/licenses/>. -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/gradient">
+
+           <ImageView
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:src="@mipmap/text_logo"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.83"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/shop_detail_pic"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:src="@mipmap/user"
+                android:background="@android:color/white"/>
+            <TextView
+                android:id="@+id/shop_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="shop_name"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@+id/shop_detail_pic"
+                android:layout_marginTop="10dp"/>
+            <ImageView
+                android:id="@+id/s_d_pin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/shop_detail_pic"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/shop_detail_name"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/pin"/>
+            <TextView
+                android:id="@+id/shop_d_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shop_detail_name"
+                android:layout_toEndOf="@id/s_d_pin"
+                android:text="area"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:id="@+id/s_d_phone_pic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/shop_detail_pic"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/s_d_pin"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/telephone"/>
+            <TextView
+                android:id="@+id/shop_d_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shop_d_area"
+                android:layout_toEndOf="@id/s_d_phone_pic"
+                android:layout_marginStart="10dp"
+                android:text="Phone"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginTop="30dp"/>
+
+
+                <ImageView
+                    android:id="@+id/s_d_whatsapp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:scaleType="fitStart"
+                    android:clickable="true"
+                    android:layout_below="@+id/s_d_email_pic"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/whatsapp">
+                </ImageView>
+
+
+            <ImageView
+                android:id="@+id/s_d_email_pic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/email"
+                android:layout_below="@+id/shop_detail_pic"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/s_d_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/s_d_phone_pic"
+                android:layout_marginTop="46dp"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_toEndOf="@id/s_d_email_pic"
+                android:layout_marginStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/s_d_category_pic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/shop_detail_pic"
+                android:layout_toEndOf="@+id/s_d_email"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/list"/>
+            <TextView
+                android:id="@+id/s_d_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shop_detail_pic"
+                android:layout_marginTop="23dp"
+                android:text="Category"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_toEndOf="@id/s_d_category_pic"
+                android:layout_marginStart="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/s_d_map"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:layout_below="@+id/s_d_email_pic"
+                android:layout_toEndOf="@id/s_d_whatsapp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@null"
+                android:scaleType="fitStart"
+                android:src="@mipmap/gps"/>
+
+
+            <TextView
+                android:id="@+id/pickadate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/s_d_map"
+                android:layout_marginTop="20dp"
+                android:text="PICK A SLOT"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <DatePicker
+                android:id="@+id/s_d_datepicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:scaleX="0.7"
+                android:scaleY="0.4"
+                style="@style/MyDatePicker"
+                android:layout_below="@+id/pickadate"
+                android:layout_marginTop="-60dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Slot"
+                android:textStyle="bold"
+                android:layout_below="@id/s_d_datepicker"
+                android:layout_marginTop="-60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="-10dp"
+                />
+            <Spinner
+                android:id="@+id/s_d_slotpicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/s_d_datepicker"
+                android:layout_marginTop="-30dp"/>
+
+            <Button
+                android:id="@+id/s_d_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient"
+                android:text="SUBMIT"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/s_d_slotpicker"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07"
+            android:background="@drawable/gradient">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/s_d_home_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/home_run"
+                    android:padding="5dp"
+
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/s_d_shops"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:src="@mipmap/shop"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/s_d_bookings"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/smart_cart"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/s_d_profile_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/user"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

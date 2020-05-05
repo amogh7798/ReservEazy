@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  This file is part of ReservEazy.
+
+    ReservEazy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ReservEazy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ReservEazy.  If not, see <https://www.gnu.org/licenses/>. -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="5dp"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/customer_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/user"/>
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/customer_pic"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:text="customer Name"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/customer_email_pic"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toEndOf="@+id/customer_pic"
+            android:layout_below="@id/customer_name"
+            android:src="@mipmap/email"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/customer_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_below="@+id/customer_name"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@id/customer_email_pic"
+            android:text="Email"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/customer_phone_pic"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toEndOf="@+id/customer_pic"
+            android:layout_below="@id/customer_email_pic"
+            android:src="@mipmap/telephone"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/customer_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_below="@+id/customer_email"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@id/customer_phone_pic"
+            android:text="phone"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

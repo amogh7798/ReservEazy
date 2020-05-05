@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  This file is part of ReservEazy.
+
+    ReservEazy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ReservEazy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ReservEazy.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient"
+    android:id="@+id/main_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+    <ImageView
+        android:id="@+id/main_logo"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:src="@mipmap/text_logo"
+        />
+   <SearchView
+       android:id="@+id/main_Search"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginTop="70dp"
+       android:queryHint="Search For Your Shop Here!!!!!"
+       android:iconifiedByDefault="false"
+       android:background="@android:color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#d3d3d3"
+            android:layout_marginBottom="50dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toLeftOf="@+id/filter"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/funnel"/>
+            <TextView
+                android:id="@+id/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter"
+                android:textStyle="bold"
+                android:textColor="#FF007F"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shop_list_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/filter"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="60dp"
+                android:background="#d3d3d3" />
+
+            <RelativeLayout
+                android:id="@+id/a_m_rl"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/a_m_fil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="FILTER"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"/>
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/a_m_diary"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/a_m_fil"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    />
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/a_m_provision"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/a_m_diary"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    />
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/a_m_meat"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/a_m_provision"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    />
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/a_m_vegetables"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/a_m_meat"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/a_m_diary"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/a_m_fil"
+                    android:layout_marginTop="20dp"
+                    android:text="Diary"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/a_m_provision"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/a_m_diary"
+                    android:layout_marginTop="10dp"
+                    android:text="Provision"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/a_m_meat"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/a_m_provision"
+                    android:layout_marginTop="10dp"
+                    android:text="Meat"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/a_m_vegetables"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/a_m_meat"
+                    android:layout_marginTop="10dp"
+                    android:text="Vegetables/Fruits"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <Button
+                    android:id="@+id/a_m_b1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/a_m_vegetables"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/gradient"
+                    android:text="SUBMIT"
+                    android:textColor="@android:color/white"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/a_home_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.333"
+                android:padding="5dp"
+                android:src="@mipmap/home_run"
+                android:scaleType="fitCenter"
+                android:background="@drawable/gradient"/>
+
+            <ImageButton
+                android:id="@+id/a_shops"
+                android:layout_width="0dp"
+                android:layout_weight="0.333"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                android:src="@mipmap/shop"
+                android:background="@drawable/gradient"/>
+
+            <ImageButton
+                android:id="@+id/a_bookings"
+                android:layout_width="0dp"
+                android:layout_weight="0.333"
+                android:src="@mipmap/smart_cart"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"/>
+
+            <ImageButton
+                android:id="@+id/a_profile_button"
+                android:layout_width="0dp"
+                android:layout_weight="0.333"
+                android:src="@mipmap/user"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

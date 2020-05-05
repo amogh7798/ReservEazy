@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  This file is part of ReservEazy.
+
+    ReservEazy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ReservEazy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ReservEazy.  If not, see <https://www.gnu.org/licenses/>. -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/whoareu"
+        android:src="@mipmap/text_logo"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="60dp"/>
+    <TextView
+        android:id="@+id/whoareu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Who Are You?"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/customer_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whoareu"
+        android:layout_marginTop="20dp"
+        android:padding="2dp"
+        android:text="Customer"
+        android:textStyle="bold"
+        android:background="@drawable/round_button"
+        android:layout_centerInParent="true"
+        />
+
+    <Button
+        android:id="@+id/merchant_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customer_button"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:text="Merchant"
+        android:textStyle="bold"
+        android:padding="2dp"
+        />
+
+
+</RelativeLayout>

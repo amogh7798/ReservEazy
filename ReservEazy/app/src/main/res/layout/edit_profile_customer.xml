@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  This file is part of ReservEazy.
+
+    ReservEazy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ReservEazy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ReservEazy.  If not, see <https://www.gnu.org/licenses/>. -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/gradient">
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/text_logo"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.83">
+            <ImageView
+                android:id="@+id/e_p_c_pic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/user"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:layout_marginTop="3dp"
+                android:layout_centerHorizontal="true"
+                android:text=".jpg file should not exceed 4MB"/>
+            <Button
+                android:id="@+id/e_p_c_edit_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile Pic"
+                android:background="@drawable/gradient"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/e_p_c_name"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/e_p_c_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/e_p_c_pic"/>
+            <ImageView
+                android:id="@+id/e_p_c_email_pic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/email"
+                android:layout_below="@id/e_p_c_edit_pic"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="30dp"
+                />
+            <TextView
+                android:id="@+id/e_p_c_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/e_p_c_edit_pic"
+                android:layout_marginTop="80dp"
+                android:text="Email"
+                android:layout_toEndOf="@id/e_p_c_email_pic"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <Button
+                android:id="@+id/e_p_c_edit_email"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/e_p_c_edit_pic"
+                android:layout_marginTop="80dp"
+                android:layout_toEndOf="@id/e_p_c_email"
+                android:text="Edit Email"
+                android:padding="5dp"
+                android:background="@drawable/gradient"
+                android:layout_marginStart="30dp"
+                android:textColor="@android:color/white"
+                />
+            <ImageView
+                android:id="@+id/e_p_c_phone_pic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/telephone"
+                android:layout_below="@id/e_p_c_email_pic"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                />
+            <TextView
+                android:id="@+id/e_p_c_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/e_p_c_email_pic"
+                android:layout_marginTop="30dp"
+                android:text="Phone"
+                android:layout_toEndOf="@id/e_p_c_email_pic"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <Button
+                android:id="@+id/e_p_c_edit_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/e_p_c_email"
+                android:layout_marginTop="30dp"
+                android:padding="5dp"
+                android:layout_toEndOf="@id/e_p_c_email"
+                android:text="Edit Phone"
+                android:background="@drawable/gradient"
+                android:layout_marginStart="30dp"
+                android:textColor="@android:color/white"
+                />
+
+            <Button
+                android:id="@+id/e_p_c_submit2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/gradient"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/e_p_c_phone"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07"
+            android:background="#d3d3d3">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/e_p_c_home_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/home_run"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/e_p_c_shops"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:src="@mipmap/shop"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/e_p_c_bookings"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/smart_cart"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/e_p_c_profile_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/user"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/e_p_c_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/gradient"
+        android:visibility="gone"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/e_p_c_text"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:text="Enter new Value"/>
+        <EditText
+            android:id="@+id/e_p_c_changed"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/e_p_c_text"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+        <Button
+            android:id="@+id/e_p_c_submit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/gradient"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/e_p_c_changed"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+</RelativeLayout>

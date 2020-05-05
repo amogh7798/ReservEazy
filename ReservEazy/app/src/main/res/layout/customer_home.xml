@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  This file is part of ReservEazy.
+
+    ReservEazy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ReservEazy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ReservEazy.  If not, see <https://www.gnu.org/licenses/>. -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:background="@drawable/gradient">
+
+            <ImageView
+                android:id="@+id/c_h_l"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/text_logo"
+                android:layout_centerHorizontal="true"/>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/c_h_v_p"
+                android:padding="5dp"
+                android:layout_below="@+id/c_h_l"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.53">
+            <ImageView
+                android:id="@+id/c_h_user_pic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/user"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/c_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/c_h_user_pic"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Welcome"
+                android:layout_marginStart="100dp"/>
+            <TextView
+                android:id="@+id/c_h_user_name"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/c_h_user_pic"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/c_welcome"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="User"/>
+
+            <Button
+                android:id="@+id/customer_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/c_welcome"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/gradient"
+                android:text="LOG OUT"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07"
+            android:background="#d3d3d3">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/c_h_home_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/home_run"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/c_h_shops"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:src="@mipmap/shop"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/c_h_bookings"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/smart_cart"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/c_h_profile_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/user"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

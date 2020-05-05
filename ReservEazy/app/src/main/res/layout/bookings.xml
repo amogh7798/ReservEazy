@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  This file is part of ReservEazy.
+
+    ReservEazy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ReservEazy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ReservEazy.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15">
+            <ImageView
+                android:id="@+id/main_logo"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/text_logo"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.78"
+            android:background="#d3d3d3">
+            <TextView
+                android:id="@+id/mybookings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="My Bookings"
+                android:textStyle="bold"
+                android:textColor="#FF007F"
+                android:textSize="20sp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shop_list_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/mybookings"
+                android:layout_marginBottom="60dp"
+                android:background="#d3d3d3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/b_home_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/home_run"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/b_shops"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/shop"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/b_bookings"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/smart_cart"
+                    android:scaleType="fitCenter"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/b_profile_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/user"
+                    android:scaleType="fitCenter"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

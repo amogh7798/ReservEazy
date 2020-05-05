@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  This file is part of ReservEazy.
+
+    ReservEazy is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ReservEazy is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ReservEazy.  If not, see <https://www.gnu.org/licenses/>. -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/gradient">
+            <ImageView
+                android:id="@+id/m_u_logo"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/text_logo"/>
+            <TextView
+                android:id="@+id/pickdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick a Date"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_below="@+id/m_u_logo"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="70dp"
+                android:textSize="20sp"/>
+
+            <DatePicker
+                android:id="@+id/datepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/m_u_logo"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="-60dp"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:calendarTextColor="@android:color/white"
+                android:scaleX="0.7"
+                android:scaleY="0.4"
+                style="@style/MyDatePicker"
+                android:layout_toEndOf="@+id/pickdate"
+                />
+
+            <TextView
+                android:id="@+id/slotpick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pick a Slot"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@id/pickdate"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="40dp"/>
+
+            <Spinner
+                android:id="@+id/slotpicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pickdate"
+                android:layout_toEndOf="@id/slotpick"
+                android:outlineAmbientShadowColor="@android:color/white"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="40dp"
+                />
+
+            <Button
+                android:id="@+id/user_detail_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:text="Submit"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/slotpick"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.43"
+            android:background="#d3d3d3">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shop_list_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="60dp"
+                android:background="#d3d3d3" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07"
+            android:background="@drawable/gradient">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/m_u_d_home_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.333"
+                    android:src="@mipmap/home_run"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/m_u_d_user_detail_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:src="@mipmap/customers"
+                    android:background="@drawable/gradient"/>
+
+                <ImageButton
+                    android:id="@+id/m_u_d_profile_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.333"
+                    android:padding="5dp"
+                    android:src="@mipmap/user"
+                    android:scaleType="fitCenter"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
